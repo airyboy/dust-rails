@@ -30,7 +30,7 @@ module Dust
 
       def evaluate(scope, locals, &block)
         template_root = Dust.config.template_root
-        template_name = file.split(template_root).last.split('.',2).first
+        template_name = name
         Source.context.call("dust.compile", data, template_name)
       end
     end
